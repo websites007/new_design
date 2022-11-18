@@ -1,0 +1,58 @@
+.footer{
+    background-color: #000;
+    padding: 80px 0;
+    color: #fff;
+}
+
+.footer__inner{
+    padding: 0 88px;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint($mobile-bp){
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+    h2{
+        margin-bottom: 24px;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 132%;
+        
+        letter-spacing: -0.02em;
+
+        @include breakpoint($tablet-bp){
+            font-size: 30px;
+        }
+    }
+    h1{
+        margin-bottom: 40px;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 132%;
+        
+        letter-spacing: -0.02em;
+        @include breakpoint($mobile-bp){
+            margin: 15px 0;
+        }
+
+        @include breakpoint($tablet-bp){
+            font-size: 36px;
+        }
+    }
+}
+
+.footer__contact{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    a{
+        color: $white;
+        cursor: pointer;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 132%;
+        
+        letter-spacing: -0.02em;
+    }
+}

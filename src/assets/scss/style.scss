@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;500;600;700&display=swap');
+
+@import './mixins.scss';
+@import './vars.scss';
+@import 'vendor/reset.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    @include breakpoint($tablet-bp){
+        font-size: 60.2%;
+    }
+    @include breakpoint($mobile-bp){
+        font-size: 57.2%;
+    }
+}
+
+body {
+    background-color: $white;
+
+    font-family: Poppins, sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: $black;
+}
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: $black;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+button{
+    outline: none;
+    border: none;
+    background: transparent;
+}
+.container{
+    max-width: 1044px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include breakpoint($tablet-bp){
+        max-width: 800px;
+    }
+
+    @include breakpoint($mobile-bp){
+        max-width: 450px;
+    }
+}
+
+.btn{
+    padding: 1.6rem 3.2rem;
+    border-radius: 6rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    background: $black;
+    color: $white;
+    overflow: hidden;
+
+    
+    @include breakpoint($mobile-bp){
+        padding: 1.5rem 3rem;
+    }
+}
+
+.main {
+    margin-top: 182px;
+    margin-bottom: 75.85px;
+}
+
+.page{
+    overflow: hidden
+}
+
+// font-family: 'Inter', sans-serif;
+// font-family: 'Poppins', sans-serif;
+
+@import './blocks/header.scss';
+@import './blocks/intro.scss';
+@import './blocks/work.scss';
+@import './blocks/about.scss';
+@import './blocks/resume.scss';
+@import './blocks/scroll.scss';
+@import './blocks/footer.scss';

@@ -1,0 +1,126 @@
+.resume__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6rem;
+    h1{
+        font-weight: 700;
+        font-size: 48px;
+        letter-spacing: -0.02em;
+
+        @include breakpoint($mobile-bp){
+            font-size: 40px;
+        }
+    }
+
+    .btn{
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        font-family: 'Poppins', sans-serif;
+        transition: $transition;
+
+        @include breakpoint($mobile-bp) {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        i{
+            transform: rotate(-45deg) translate(3px);
+            transition: $transition;
+        }
+
+        &:hover{
+            background: $color__primary;
+
+            i{
+                transform: rotate(-45deg) translate(100px);
+            }
+        }
+    }
+}
+
+.resume__inner{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+
+    .resume__card{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @include breakpoint($tablet-bp){
+            flex-direction: column;
+        }
+
+        &--content{
+            position: relative;
+            width: 775px;
+            
+            padding-top: 8px;
+            padding-bottom: 32px;
+
+            @include breakpoint($tablet-bp){
+                width: 100%;
+            }
+
+            &::before{
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+
+                background: #0000004D;
+            }
+        }
+        &--top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+
+            @include breakpoint($mobile-bp){
+                display: block;
+            }
+
+            h3{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.02em;
+            }
+
+        }
+        .resume__top--left {
+            h1{
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 30px;
+                letter-spacing: -0.02em;
+            }
+            h2{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.02em;
+            }
+        }
+    }
+
+    .resume__title{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+    }
+    .resume__text{
+        width: 509.16px;
+
+        @include breakpoint($mobile-bp){
+            width: 100%;
+        }
+    }
+    
+}
